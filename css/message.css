@@ -1,0 +1,87 @@
+.message {
+	padding: 10px 20px;
+	/* animation: fadeInMessage 0.5s ease-in; replaced by react-motion */
+}
+.messageDate {
+	composes: title6 from '../../helpers/sharedStyles.css';
+	composes: textGray from '../../helpers/sharedStyles.css';
+}
+.messageDateUnread {
+	composes: messageDate;
+}
+	.messageDateUnread:before {
+		content: '';
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		margin-right: 5px;
+		border-radius: 50%;
+		background-color: #ff8133;
+	}
+.messageContainer {
+	padding: 15px;
+	margin: 5px 0px;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 4px;
+	composes: borderMedGray from '../../helpers/sharedStyles.css';
+}
+.messageContainerReceived {
+	composes: messageContainer;
+	composes: bgdLightGray from '../../helpers/sharedStyles.css';
+	border: none;
+}
+.messageContent {
+	composes: darkGray from '../../helpers/sharedStyles.css';
+	text-align: left;
+}
+.messageFooter {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 15px;
+}
+.avatarContainerMessage {
+	width: 30px;
+	height: 30px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	text-align: left;
+}
+.attachmentsList {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.attachmentLink{
+		composes: textGray from '../../helpers/sharedStyles.css';
+		padding: 0px 10px;
+		font-size: 14px;
+	}
+	.attachmentLink:hover {
+		color: #ff8133;
+	}
+	.attachmentLink:before {
+		content: '';
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background: url(../../../images/icons/messageAttachOr.png) no-repeat;
+	}
+/*keyframes*/
+@-webkit-keyframes fadeInMessage {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes fadeInMessage {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes fadeInMessage {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes fadeInMessage {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}

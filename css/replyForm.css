@@ -1,0 +1,150 @@
+.container {
+		padding: 10px 20px;
+	}
+/*avatars*/
+	.avatarContainer {
+		width: 20%;
+		display: flex;
+		justify-content: center;
+	}
+	.avatarContainerMessage {
+		width: 50px;
+		height: 30px;
+	}
+/*buttons*/
+	.iconBtn {
+		display: block;
+		text-indent: -9999999px;
+		min-width: 20px;
+		height: 20px;
+		border: none;
+		background-color: transparent;
+		background-repeat: no-repeat;
+		background-position: center top;
+		cursor: pointer;
+	}
+	.btnText{
+		composes: iconBtn;
+		background-image: url(../../../images/icons/messageText.png);
+	}
+	.btnTextActive {
+		composes: btnText;
+		background-image: url(../../../images/icons/messageTextOr.png);
+	}
+	.btnText:hover{
+		background-image: url(../../../images/icons/messageTextOr.png);
+	}
+	.btnEmoji{
+		composes: iconBtn;
+		background-image: url(../../../images/icons/messageEmoji.png);
+	}
+	.btnEmojiActive {
+		composes: btnEmoji;
+		background-image: url(../../../images/icons/messageEmojiOr.png);
+	}
+	.btnEmoji:hover{
+		background-image: url(../../../images/icons/messageEmojiOr.png);
+	}
+	.btnAttach{
+		composes: iconBtn;
+		background-image: url(../../../images/icons/messageAttach.png);
+	}
+	.btnAttachActive {
+		composes: btnAttach;
+		background-image: url(../../../images/icons/messageAttachOr.png);
+	}
+	.btnAttach:hover{
+		background-image: url(../../../images/icons/messageAttachOr.png);
+	}
+/*form */
+	.messageFormBase {
+		border-radius: 4px;
+		margin: 15px 20px;
+		padding: 12px 0px 0px;
+		border-width: 1px;
+		border-style: solid;
+		transition: all 0.5s ease;
+		.replyInput {
+			transition: height 0.5s;
+		}
+		.messageFormFooter {
+			transition-delay: 0.5s;
+			transition: opacity 0.5s;
+		}
+	}
+	.messageForm {
+		composes: messageFormBase;
+		composes: bgdLightPeach borderLightPeach from '../../helpers/sharedStyles.css';
+		.messageFormFooter {
+			translate: scaleY(0);
+			transition: all 0.3s ease;
+		}
+	}
+	.messageFormOpen {
+		composes: messageFormBase;
+		composes: borderOrange from '../../helpers/sharedStyles.css';
+		.replyInput {
+			height: 150px;
+		}
+		.messageFormFooter {
+			display: block;
+			opacity: 1;
+			translate: scaleY(1);
+			transition: all 0.3s ease;
+		}
+	}
+	.messageFormContainer {
+		padding: 0px 15px 12px;
+		display: flex;
+		justify-content: flex-start;
+	}
+	.replyInput {
+		composes: generalInput orangePlaceholder from '../../helpers/sharedStyles.css';
+		resize: none;
+		width: 100%;
+		height: 30px;
+		font-size: 16px;
+	}
+	.messageFormFooter {
+		display: none;
+		opacity: 0;
+		width: 100%;
+		height: 60px;
+		border-top-style: solid;
+		border-top-width: 1px;
+		composes: borderLightPeach from '../../helpers/sharedStyles.css';
+	}
+	.footerContainer {
+		composes: container;
+		height: 60px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.footerNav {
+		width: 100px;
+		display: flex;
+		justify-content: space-between;
+	}
+	.inputSend {
+		composes: generalInput from '../../helpers/sharedStyles.css';
+		composes: walsheimMed from '../../helpers/sharedStyles.css';
+		padding: 10px 15px;
+		border-radius: 4px;
+		background-color: #ff8133;
+		color: #fff;
+		font-size: 1rem;
+	}
+
+	.inputCancel {
+		composes: inputSend;
+		margin-left: auto;
+		margin-right: 5px;
+		background-color: white !important;
+		color: #A6A5A4;
+	}
+
+	.inputCancel:hover {
+		color: #FFFFFF;
+		background-color: #FF0000 !important;
+	}

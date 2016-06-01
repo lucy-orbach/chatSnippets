@@ -1,0 +1,63 @@
+.aside {	
+	padding: 0px;
+	@media (max-width: 767px) {
+		padding-top: 70px;
+		@media(orientation: landscape) {
+			margin-top: -30px;
+			padding-top: 0px;
+			background-color: rgba(246,245,243, 0.7);
+		}
+	}
+	@media (min-width: 768px) {
+		width: 35%;
+		border-right: 1px #d9d8d6 solid;
+	}
+}
+	.asideHeader {
+		border-bottom: 1px #d9d8d6 solid;
+		@media (max-width: 767px) {
+			padding: 10px 20px;
+			@media(orientation: landscape) {
+				width: 80%;
+			}
+		}
+		@media (min-width: 768px) {
+			height: 100px;
+			padding: 20px;
+		}
+	}
+		.form {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: center;
+			-ms-align-items: center;
+			align-items: center;
+			height: 40;
+		}
+			.searchInput {
+				composes: generalInput from '../../helpers/sharedStyles.css';
+				width: 100%;
+				height: 40px;
+				padding: 0px 5px;
+				border: 1px solid #a6a5a4;
+				border-radius: 4px;
+				@media (max-width: 767px) and (orientation: landscape) {
+					background-color: #f6f5f3;
+				}
+			}
+			.label {
+				composes: title6 from '../../helpers/sharedStyles.css';
+				composes: textGray from '../../helpers/sharedStyles.css';
+				text-align: left;
+				width: 100%;
+				height: 20px;
+				padding-bottom: 3px;
+				border-bottom: 1px #d9d8d6 solid;
+				margin: 15px 0px 0px;
+			}
+
+
+

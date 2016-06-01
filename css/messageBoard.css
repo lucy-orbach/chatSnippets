@@ -1,0 +1,97 @@
+.messageBoard {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	align-content: space-between;
+	width: 100%;
+}
+.header {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+	border-bottom: 1px #d9d8d6 solid;
+	height: 100px !important;
+	/*mobile*/
+	@media (max-width: 767px) {
+		padding-top: 20px;
+	}
+	/*tablets and up*/
+	@media (min-width: 768px) {
+	}
+}
+.activityInfo {
+	margin-left: 20px;
+	display: flex;
+	justify-content: flex-start;
+}
+.avatarContainer {
+	
+}
+.textContainer {
+	text-align: left;	
+	padding: 0px 10px;
+	/*mobile*/
+	@media (max-width: 767px) {}
+	/*tablets and up*/
+	@media (min-width: 768px) {}
+}
+.activityStatus {
+	composes: textGray from '../../helpers/sharedStyles.css';
+	font-size: 14px;
+	margin: 0px;
+}
+	.hostName {
+		color: #000;
+	}
+.eventTitle {
+	composes: wMed16 from '../../helpers/sharedStyles.css';
+	margin: 0px;
+}
+.iconNav {
+	display: flex;
+	justify-content: flex-end;
+	-ms-align-items: center;
+	align-items: center;
+	/*mobile*/
+	@media (max-width: 767px) {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+	/*tablets and up*/
+	@media (min-width: 768px) {
+		margin-right: 20px;
+	}
+}
+.iconBtn {
+	margin: 0px 5px;
+}
+	.btnReply {
+		composes: iconBtn;
+		composes: btnReply from '../../helpers/dashboards.css';	
+	}
+	.btnArchive {
+		composes: iconBtn;
+		composes: btnArchive from '../../helpers/dashboards.css';	
+	}
+.body {
+	flex-grow: 1;
+	overflow-y: auto;
+	max-height: 100%;
+}
+.messagesList {
+	list-style: none;
+}
+.footer {
+	-ms-align-self: flex-end;
+	align-self: flex-end;
+	width: 100%;
+	padding: 10px 0px;
+}
+
+

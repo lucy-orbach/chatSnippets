@@ -1,0 +1,22 @@
+.channels {
+  /* tablet landscape and UP */
+  @media (min-width: 800px) {
+    height: 440px;
+    background-color: #fff;
+  }
+}
+.eventList {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* mobile only */
+  @media (max-width: 767px) {
+    height: 60vh;
+    @media(orientation: landscape) {
+      height: 70vh;
+    }
+  }
+  /* tablet portrait and UP*/
+  @media (min-width: 800px) {
+    height: 100%;
+  }
+}

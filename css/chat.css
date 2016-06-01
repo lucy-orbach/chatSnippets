@@ -1,0 +1,139 @@
+.chatContainer {}
+.titleContainer {
+	composes: titleContainer from '../../helpers/dashboards.css';
+	/*mobile*/
+	@media (max-width: 767px) {
+		flex-direction: row !important;
+		justify-content: flex-start !important;
+		-ms-align-items: center !important;
+		align-items: center !important;
+		padding: 0px 20px;
+	}
+	/*tablets and up*/
+	@media (min-width: 768px) {
+		height: 60px;
+	}
+}
+	.menuIcon {
+		composes: btnIcon from '../../helpers/sharedStyles.css';
+		width: 30px;
+		height: 30px;
+		margin: 0px 5px 0px 0px;
+		background: transparent url(../../../images/icons/HamburgerBl.png) no-repeat center center;
+	}
+	.title {
+		composes: title from '../../helpers/dashboards.css';
+	  width: 70%;
+	  /*mobile*/
+		@media (max-width: 767px) {
+			flex-grow: 1;
+		}
+	}
+	.newMessageBtn {
+		composes: btnNewMessage from '../../helpers/dashboards.css';
+	}
+.chat {
+	height: 100%;
+	composes: panelContainer from '../../helpers/dashboards.css';
+	/*mobile*/
+	@media (max-width: 767px) {
+		padding: 0px;
+	}
+	/*tablets and up*/
+	@media (min-width: 768px) {
+		padding: 0px
+	}
+}
+.tabNav {
+	width: 100%;
+	height: 56px;
+	padding: 0px 20px;
+	border-bottom: 1px #d9d8d6 solid;
+	text-align: left;
+}
+	.tabList {
+		height: 100%;
+		display: flex;
+		justify-content: flex-start;
+		-ms-align-items: center;
+		align-items: center;
+	}
+	.tab {
+		composes: textGray from '../../helpers/sharedStyles.css';
+		font-size: 16px;
+		padding-left: 20px;
+		cursor: pointer;
+		transition: color 0.5s easi-in-out;
+	}
+		.tab:hover {
+			color: #ff8133;
+			transition: color 0.5s easi-in-out;
+		}
+
+.container {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 100%;
+	max-height: 90%;
+}
+/*.aside {
+	width: 35%;
+	padding: 0px;
+	border-right: 1px #d9d8d6 solid;
+}*/
+	.asideHeader {
+		height: 100px;
+		padding: 20px;
+		border-bottom: 1px #d9d8d6 solid;
+	}
+	.form {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center;
+		-ms-align-items: center;
+		align-items: center;
+		height: 40;
+	}
+	.searchInput {
+		composes: generalInput from '../../helpers/sharedStyles.css';
+		width: 100%;
+		height: 40px;
+		padding: 0px 5px;
+		border: 1px solid #a6a5a4;
+		border-radius: 4px;
+	}
+	.label {
+		composes: title6 from '../../helpers/sharedStyles.css';
+		composes: textGray from '../../helpers/sharedStyles.css';
+		text-align: left;
+		width: 100%;
+		height: 20px;
+		padding-bottom: 3px;
+		border-bottom: 1px #d9d8d6 solid;
+		margin: 15px 0px 0px;
+	}
+.main {
+	height: inherit;
+	padding: 0px 0px 20px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	/*mobile*/
+	@media (max-width: 767px) {
+		width: 100%;
+	}
+	/*tablets and up*/
+	@media (min-width: 768px) {
+		width: 65%;
+	}
+}
+
+

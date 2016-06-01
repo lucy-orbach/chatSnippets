@@ -1,0 +1,11 @@
+.badge {
+		composes: bgdOrange from '../../helpers/sharedStyles.css';
+		composes: wMed11 from '../../helpers/sharedStyles.css';
+		display: inline-block;
+		min-width: 18px;
+		height: 18px;
+		border-radius: 9px;
+		color: #fff;
+		line-height: 18px;
+		text-align: center;
+	}

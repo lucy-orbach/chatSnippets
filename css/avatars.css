@@ -1,0 +1,29 @@
+.avatarContainer {
+	min-width: 30px;
+	min-height: 30px;
+	text-align: center;
+}
+.avatar {
+	/*inline: set width and height*/
+  display: block;
+  min-width: 30px;
+	min-height: 30px;
+  border-radius: 50% !important;
+  margin: 0px auto;
+  background-size: cover;
+  background-position: center center;
+}
+.userAvatar {
+	composes: avatar;
+	composes: bgdImage from '../../helpers/sharedStyles.css';
+	color: transparent;
+}
+.defaultAvatar {
+	composes: avatar;
+	composes: WalsheimMed from '../../helpers/sharedStyles.css';
+	composes: orange bgdLightPeach from '../../helpers/sharedStyles.css';
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

@@ -1,0 +1,56 @@
+.channelTab {
+	cursor: pointer;
+	overflow: hidden;
+	margin: 0px;
+	padding: 0px;
+}
+.container {
+	composes: df jcsb aic from '../../helpers/sharedStyles.css';
+	position: relative;
+	height: 100%;
+	padding: 10px 20px 10px 20px;
+	margin: 0px;
+	border-bottom: 1px #d9d8d6 solid;
+	transition: all 0.5s ease-in-out;
+}
+.container:hover {
+	.title {
+		color: #ff8133;
+		transition: all 0.5s ease-in-out;
+	}
+}
+.avatarContainer {
+	padding: 0px 10px 0px 0px;
+}
+.avatarContainerSelected{
+	composes: avatarContainer;
+	div > span {
+		background-color: #fff;
+	}
+}
+.textContainer {
+	composes: fg1 from '../../helpers/sharedStyles.css'; /*flex-grow: 1*/
+	margin-right: 5px;
+}
+.title {
+	composes: wMed16 from '../../helpers/sharedStyles.css'; /* font */
+	text-align: left;
+	margin: 0px;
+	text-transform: capitalize;
+}
+.subtitle {
+	composes: textGray from '../../helpers/sharedStyles.css'; /* color */
+	display: block;
+	font-size: 14px;
+	text-align: left;
+	text-transform: capitalize;
+}
+.selectedIcon {
+	position: absolute;
+	top: 40%;
+	right: 5px;
+	display: block;
+	width: 10px;
+	height: 10px;
+	background: url(../../../images/icons/caretRight.png) no-repeat left top;
+}
